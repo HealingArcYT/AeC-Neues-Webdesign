@@ -68,12 +68,19 @@ body {
 
 #menu {
     height: 100vh;
+    width: 100vw;
+
     display: flex;
     align-items: center;
 
-    position: relative;
+    position: absolute;
     transition: all 800ms ease;
+    top: 0px;
     left: -100%;
+
+    pointer-events: none;
+
+    z-index: 0;
 }
 
 #menu-items {
@@ -81,6 +88,8 @@ body {
     z-index: 2;
 
     max-height: 100vh;
+
+    pointer-events: all;
 }
 
 #menu-items:hover > .menu-item {
